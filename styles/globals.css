@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.link{
+  @apply text-black block p-0 font-bold hover:text-yellow-500
+}
+.hero{
+  @apply bg-gradient-to-t from-sky-400 to-sky-50
+}
+.cards{
+  @apply rounded overflow-hidden shadow-lg bg-gradient-to-b from-cyan-200
+}
+.calendar .day{
+  width: calc(100% / 7);
+  @apply relative h-11 inline-block bg-white p-10 m-0 box-border z-0 text-center border-t justify-center
+}
+
+.selected{
+  @apply h-6 w-9 bg-red-600 text-white flex-1 place-items-center px-4 hover:bg-black hover:text-white
+  inline-flex items-center justify-center cursor-pointer text-center leading-none rounded-full transition ease-in-out duration-100
+}
+.selected1{
+  @apply bg-gray-600 text-white flex-1 px-4 place-items-center 
+  inline-flex w-9 h-6 items-center justify-center cursor-pointer text-center leading-none rounded-full transition ease-in-out duration-100
+}
+.before{
+  @apply text-gray-400
+}
+.header{
+  @apply flex justify-between items-center font-extrabold text-blue-800 p-10 text-4xl 
+    }
+    .day-names{
+    grid-template-columns: repeat(7, 1fr);
+}
+.inicio{
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  grid-template-columns: 1fr;
+  width: 50vw; 
+  height: 50vh;
+  background-color: lightblue;
+}
